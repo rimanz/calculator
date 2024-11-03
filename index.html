@@ -3,52 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
     <title>Calculator</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Calculator</h1>
-        </div>
+        <h1>Calculator</h1>
     </header>
 
-    <div class="container">
-        <main>
-            <div class="calculator-shell">
-                <div class="display"></div>
+    <main>
+        <div class="calculator-shell">
+            <div class="display"></div>
 
-                <div class="keypad">
-                    <div class="controls">
-                        <button class="control">AC</button>
-                        <button class="control">C</button>
-                        <button class="control">⌫</button>
-                    </div>
+            <div class="keypad">
+                <!-- First two control buttons -->
+                <button class="control">C</button>
+                <button class="control">⌫</button>
 
-                    <div class="operators">
-                        <button class="control">+</button>
-                        <button class="control">-</button>
-                        <button class="control">*</button>
-                        <button class="control">/</button>
-                        <button class="control">=</button>
-                    </div>
+                <!-- Operators and operands -->
+                <button class="operator">%</button>
+                <button class="operator">/</button>
 
-                    <div class="numpad">
-                        <button class="control">1</button>
-                        <button class="control">2</button>
-                        <button class="control">3</button>
-                        <button class="control">4</button>
-                        <button class="control">5</button>
-                        <button class="control">6</button>
-                        <button class="control">7</button>
-                        <button class="control">8</button>
-                        <button class="control">9</button>
-                        <button class="control">0</button>
-                        <button class="control">.</button>  
-                    </div>
-                </div>
+                <button class="operand">1</button>
+                <button class="operand">2</button>
+                <button class="operand">3</button>
+                <button class="operator">*</button>
+
+                <button class="operand">4</button>
+                <button class="operand">5</button>
+                <button class="operand">6</button>
+                <button class="operator">-</button>
+
+                <button class="operand">7</button>
+                <button class="operand">8</button>
+                <button class="operand">9</button>
+                <button class="operator">+</button>
+
+                <button class="operand large">0</button>
+                <button class="operand">.</button>
+                <button class="operator">=</button>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
 
     <footer>
         <div class="container">
