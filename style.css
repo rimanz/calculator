@@ -1,0 +1,104 @@
+/* Generic Styles */
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+body {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, footer {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+small {
+    font-size: 0.8em;
+}
+
+main {
+    max-width: 20rem;
+    margin: 10px auto;
+    width: 18rem;
+    height: 24rem;
+}
+
+/* Style for calculator components */
+.calculator-shell {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 10px 4px;
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px gray, -1px 2px 10px whitesmoke;
+}
+
+.display {
+    font-size: 80px;
+    text-align: right;
+    height: 24%;
+    margin: 3px;
+    border: 5px solid rgba(0, 0, 0, 0.618);
+    background-color: grey;
+}
+
+.keypad {
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 4px;
+    padding: 4px;
+}
+
+/* Style for buttons */
+button {
+    font: inherit;
+    font-size: 1.5rem;
+    flex-basis: 4rem;
+    max-width: 4rem;
+    max-height: 3rem;
+    background-color: inherit;
+    border: 1px solid silver;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px gray, -1px 2px 5px white;
+}
+
+button.large {
+    min-width: calc(8rem + 7px);
+    flex-basis: 8rem;
+    flex-grow: 2;
+}
+
+button:hover {
+    font-weight: bold;
+}
+
+button:active { 
+    box-shadow: 1px 2px 5px inset rgba(0, 0, 0, 0.667), -1px 2px 5px inset white;
+}
+
+.control {
+    background-color: salmon;
+}
+
+.operator {
+    background-color: darksalmon;
+}
