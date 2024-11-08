@@ -44,7 +44,7 @@ function operate(operator, operand1, operand2) {
             return squareRoot(operand1);
             break;
         case '=':
-            return operate(operator, operand1, operand2);
+            return evaluate(operator, operand1, operand2);
             break;
         case 'C':
             clear();
@@ -106,6 +106,11 @@ function handleDot() {
     }
 }
 
+function handleEqual(key) {
+    operate(operator, operand1, operand2);
+    operator = key;
+}
+
 function showNumber(num) {
     display.textContent = num;
 }
@@ -147,4 +152,8 @@ function percentile(n) {
 
 function squareRoot(n) {
     return n ** 0.5;
+}
+
+function evaluate(operator, operand1, operand2) {
+    return operate(operator, operand1, operand2);
 }
