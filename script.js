@@ -17,9 +17,6 @@ keypad.addEventListener('click', handleClick);
 
 // Operational functions
 function operate(operator, operand1, operand2) {
-    operand1 = +operand1;
-    operand2 = +operand2;
-    console.log(operand1, operator, operand2);
 
     switch(operator) {
         case '+':
@@ -43,9 +40,6 @@ function operate(operator, operand1, operand2) {
         case '√':
             return squareRoot(operand1);
             break;
-        case '=':
-            return operate(operator, operand1, operand2);
-            break;
         case 'C':
             clear();
             break;
@@ -67,6 +61,8 @@ function handleClick(event) {
         handleDot();
     } else if (keyType == 'operator') {
         handleOperator(key);
+    } else if (keyType == 'result') {
+        getResult();
     }
 }
 
@@ -84,19 +80,9 @@ function handleOperand(operand) {
 }
 
 function handleOperator(key) {
-    if (operand1 == null && operand2 == null) {
-        operand1 = currentNumber;
-        currentNumber = 0;
-        operator = key;
-    } else if (operand1 != null && operand2 == null) {
-        operand2 =   currentNumber;
-        currentNumber = operate(operator, operand1, operand2);
-        showNumber(currentNumber);
-        operand1 = currentNumber;
-        currentNumber = 0;
-        operand2 = null;
-        operator = key;
-    }
+    operand1 = currentNumber;
+    currentNumber = 0;
+    operator = key;
 }
 
 function handleDot() {
@@ -108,6 +94,15 @@ function handleDot() {
 
 function showNumber(num) {
     display.textContent = num;
+}
+
+function getResult() {
+    operand2 = currentNumber;
+    const result = operate(operator, +operand1, +operand2);
+    currentNumber = 0;
+    operand1 = result;
+    showNumber(result);
+    key = null;
 }
 
 function clear() {
