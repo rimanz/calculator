@@ -20,11 +20,11 @@ A simple, fully functional calculator built using **HTML**, **CSS**, and **JavaS
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/calculator-project.git
+   git clone https://github.com/rimanz/calculator.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd calculator-project
+   cd calculator
    ```
 3. Open the `index.html` file in your preferred browser.
 
