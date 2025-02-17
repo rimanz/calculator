@@ -36,6 +36,7 @@ calculator-project/
 |-- styles.css
 |-- script.js
 |-- README.md
+|-- LICENSE
 ```
 
 ## License
