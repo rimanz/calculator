@@ -16,6 +16,12 @@ A simple, fully functional calculator built using **HTML**, **CSS**, and **JavaS
 - **CSS**: Styling the layout with modern design techniques
 - **JavaScript**: Logic for performing calculations and managing state
 
+## 📝 Future Improvements
+- Fix edge cases (e.g., negative numbers, display overflow, etc.)
+- Keyboard Support
+- Improve UI/UX with animations and themes
+- Add history tracking for calculations
+
 ## How to Use
 
 You can use the calculator directly without cloning or setting up anything! Just visit:
