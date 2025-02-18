@@ -18,15 +18,9 @@ A simple, fully functional calculator built using **HTML**, **CSS**, and **JavaS
 
 ## How to Use
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/rimanz/calculator.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd calculator
-   ```
-3. Open the `index.html` file in your preferred browser.
+You can use the calculator directly without cloning or setting up anything! Just visit:
+
+🔗 **[https://rimanz.github.io/calculator/](https://rimanz.github.io/calculator/)**
 
 ## Project Structure
 
