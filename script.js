@@ -33,8 +33,12 @@ const calculator = {
         this.current = '';
     },
 
-    updateCurrentOperand(digit) {
+    updateCurrentOperand(digit, maxLength=12) {
         this.current += digit.toString();
+
+        if (this.current.length > maxLength) {
+            this.current = this.current.slice(0, maxLength);
+        }
     },
 
     reset() {
@@ -104,9 +108,20 @@ function updateDisplay(value) {
     // update display according to the current value if no value provided
     value = value ?? calculator.current;
     display.textContent = value === '' ? 0 : value;
+    adjustFontSize(display, 30, 60);
 }
 
 function deleteLastDigit() {
     calculator.current = calculator.current.slice(0, -1);
     updateDisplay();
+}
+
+function adjustFontSize(element, min) {
+    const styles = window.getComputedStyle(element, null);
+    let fontSize = parseFloat(styles.getPropertyValue('font-size'));
+
+    while (element.scrollWidth > element.clientWidth && fontSize > min) {
+        fontSize -= 1;
+        element.style.fontSize = fontSize + 'px';
+    }
 }
