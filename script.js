@@ -59,12 +59,25 @@ const calculator = {
 const display = document.querySelector('.display');
 const keypad = document.querySelector('.keypad');
 
-keypad.addEventListener('click', handleInput);
+keypad.addEventListener('click', (event) => {
+    const key = event.target.textContent;
+    handleInput(key);
+});
+
+document.addEventListener('keyup', (event) => {
+    event.preventDefault();
+    let key = event.key;
+    handleInput(key);
+});
+
+document.addEventListener('keydown', (event) => {
+    // workaround to prevent any defaults on keydown
+    event.preventDefault();
+})
 
 // Event Handlers:
-function handleInput(event) {
-    const key = event.target.textContent;
-
+function handleInput(key) {
+    
     switch (key) {
         case '.':
             if (calculator.current.includes('.')) {
@@ -102,10 +115,13 @@ function handleInput(event) {
             }
             break;
         case 'AC':
+        case 'Escape':
             calculator.reset();
             updateDisplay('0');
             break;
         case '←':
+        case 'Backspace':
+        case 'Delete':
             deleteLastDigit();
             break;
     }
