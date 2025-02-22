@@ -27,6 +27,7 @@ main {
     background-color: grey;
     border: 2px solid;
     padding: 5px 3px;
+    overflow: hidden;
 }
 
 .keypad {
