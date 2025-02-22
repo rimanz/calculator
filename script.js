@@ -103,6 +103,7 @@ function handleInput(key) {
         case '*':
         case '/':
         case '=':
+        case 'Enter':
             if (calculator.previous === '') {
                 calculator.previous = calculator.current;
                 calculator.current = '';
