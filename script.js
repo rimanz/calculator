@@ -14,19 +14,23 @@ const calculator = {
     operate() {
         let result;
 
-        switch (this.operator) {
-            case '+':
-                result = this.add(this.previous, this.current);
-                break;
-            case '-':
-                result = this.subtract(this.previous, this.current);
-                break;
-            case '*':
-                result = this.multiply(this.previous, this.current);
-                break;
-            case '/':
-                result = this.divide(this.previous, this.current);
-                break;
+        if (this.current === '') {
+            return;
+        } else {
+            switch (this.operator) {
+                case '+':
+                    result = this.add(this.previous, this.current);
+                    break;
+                case '-':
+                    result = this.subtract(this.previous, this.current);
+                    break;
+                case '*':
+                    result = this.multiply(this.previous, this.current);
+                    break;
+                case '/':
+                    result = this.divide(this.previous, this.current);
+                    break;
+            }
         }
 
         this.previous = result;
