@@ -30,6 +30,9 @@ const calculator = {
                 case '/':
                     result = this.divide(this.previous, this.current);
                     break;
+                case '=':
+                    result = (this.current === '') ? 
+                             this.previous : this.current;
             }
         }
 
@@ -86,6 +89,7 @@ function handleInput(event) {
         case '-':
         case '*':
         case '/':
+        case '=':
             if (calculator.previous === '') {
                 calculator.previous = calculator.current;
                 calculator.current = '';
